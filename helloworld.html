@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>React Hello World</title>
+
+</head>
+<body>
+
+<div id="root"></div>
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script>
+var h1 = React.createElement('h1',null,'Hello World'); /*Create Element First Which You Want To Show*/
+var root = document.getElementById('root'); /*Get DOM Where You Want To Show*/
+
+ReactDOM.render(h1,root); /*Render method consist of (what, where)*/
+
+</script>
+</body>
+</html>
