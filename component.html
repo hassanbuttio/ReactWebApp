@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>React Web App Component</title>
+<style>
+*{
+	padding:0;
+	margin:0;
+}
+body{margin:0;
+padding:0;}
+#header{
+	background-color: yellowgreen;
+	width:100%;
+}
+#content {
+	float:left;
+		width:100%;
+
+	background-color: dodgerblue;
+}
+#footer {
+	float:left;
+		width:100%;
+
+	background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<div id="header"></div>
+<div id="content"></div>
+<div id="footer"></div>
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script>
+
+/*Components*/
+class HeaderComponent extends React.Component{
+           render(){
+           	return React.createElement("h4",null,"This Is Header");
+           }
+}
+
+class ContentComponent extends React.Component{
+	   render(){
+           	return React.createElement("p",null,"This Is Content");
+           }
+}
+
+class FooterComponent extends React.Component{
+	   render(){
+           	return React.createElement("h3",null,"This Is Footer");
+           }
+}
+
+/*Variable Element*/
+var headerComponent = React.createElement(HeaderComponent,null);
+var contentComponent = React.createElement(ContentComponent,null);
+var footerComponent = React.createElement(FooterComponent,null);
+
+/*DOM*/
+var header = document.getElementById('header');
+var content = document.getElementById('content');
+var footer = document.getElementById('footer');
+
+
+/*Render*/
+ReactDOM.render(headerComponent,header);
+ReactDOM.render(contentComponent,content);
+ReactDOM.render(footerComponent,footer);
+
+</script>
+
+</body>
+</html>
